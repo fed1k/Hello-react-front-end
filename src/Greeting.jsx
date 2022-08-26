@@ -1,7 +1,9 @@
+import { useSelector } from "react-redux";
+
 const Greeting = () => {
-    return (
-        <h1>Hola</h1>
-    );
+  const data = useSelector((state) => state);
+
+  return <h1>{data ? data.greeting : "Loading..."}</h1>;
 }
- 
+
 export default Greeting;
